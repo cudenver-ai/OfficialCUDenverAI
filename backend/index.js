@@ -102,7 +102,7 @@ app.get('/events', async (req, res) => {
 
   
 //////////////////////////
-// Signing in / Signing up
+// Signing ins / Signing ups
 //////////////////////////
 
 
