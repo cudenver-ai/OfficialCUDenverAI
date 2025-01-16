@@ -14,6 +14,8 @@ function Projects() {
         "Description of the Decoy Challenge project. Learn about AI robustness and security through adversarial techniques.",
     },
     {
+      //hi//
+      
       id: 2,
       title: "Project #2",
       image: require("./images/download.jpg"), // Path relative to the current file
