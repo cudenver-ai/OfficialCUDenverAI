@@ -1,7 +1,6 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Signup from './components/Signup';
-import Login from './components/Login';
+import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
+import Signup from './components/Authentication.tsx';
 import Home from './components/Home.tsx';
 import Projects from './components/Projects';
 import Blog from './components/Blog';
@@ -16,14 +15,13 @@ const allowedOrigins = [ "http://127.0.0.1:8080/"];
 
 
 function App() {
+
   return (
     <Router>
       <div>
-        {/* Possibly a layout that has a nav bar and a footer */}
         <Nav />
         <Routes>
           <Route path="/signup" element={<Signup />} />
-          <Route path="/login" element={<Login />} />
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
           <Route path="/blog" element={<Blog />} />
