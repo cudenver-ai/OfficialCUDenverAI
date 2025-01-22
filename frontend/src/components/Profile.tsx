@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Profile.css';
 import { useSelector, useDispatch } from 'react-redux'; 
+import { setProfile, setLoading, setError } from "../actions/ProfileActions";
 import { CgProfile } from "react-icons/cg";
 
 function Profile() {
@@ -20,7 +21,7 @@ function Profile() {
      * @typedef {boolean} loading - Indicates whether the news data is currently being loaded
      * @typedef {string | null} error - Error message if there was an issue fetching the news, or null if no error
      */
-    const { news, loading, error } = useSelector((state: any) => state.news);
+    const {profile, loading, error } = useSelector((state: any) => state.profile);
     
     ///////////////////////////
     //Functions
@@ -31,25 +32,6 @@ function Profile() {
      * 
      * @returns {Promise<Array<Object>>} - A promise resolving to a list of news
      */    
-    useEffect(() => {
-        // Check if news is already in Redux state
-        if (news.length === 0) {
-          dispatch(setLoading(true));
-          fetch("http://localhost:8080/news")
-            .then((response) => {
-              if (!response.ok) {
-                throw new Error(`HTTP error! Status: ${response.status}`);
-              }
-              return response.json();
-            })
-            .then((data) => {
-              dispatch(setNews(data));
-            })
-            .catch((error) => {
-              dispatch(setError(error.message));
-            });
-        }
-      }, [dispatch, news.length]);
 
     ///////////////////////////
     // TSX Rendering
@@ -59,36 +41,21 @@ function Profile() {
 
             {/* Profile Section */}
             <section>
-                <div className="profile-section">
-                    <div className="avatar">
-                        <CgProfile size={80} />
-                    </div>
-                    <div className="profile-details">
-                        <h2>{profile?.name || "John Doe"}</h2>
-                        <p>{profile?.email || "johndoe@example.com"}</p>
-                        <button onClick={handleEditProfile}>Edit Profile</button>
-                    </div>
+            <div className="profile-container">
+                <div className="profile-header">
+                    <img src={profilePicture} alt="Profile" />
+                    <h1>{username}</h1>
+                    <p>{email}</p>
+                </div>
+
+                <div className="profile-bio" >
+                    <h2>Bio</h2>
+                    <p>{bio}</p>
+                </div>
                 </div>
             </section>
 
-            
-            {/* Projects Section */}
-            <section>
-            <div className="projects-section">
-                <h3>Your Projects</h3>
-                <ul>
-                    {projects?.length > 0 ? (
-                        projects.map((project, index) => (
-                            <li key={index}>
-                                <Link to={`/project/${project.id}`}>{project.name}</Link>
-                            </li>
-                        ))
-                    ) : (
-                        <p>No projects found. <Link to="/create-project">Create one?</Link></p>
-                    )}
-                </ul>
-            </div>
-            </section>
+
 
         </div>
     );
