@@ -1,233 +1,97 @@
-html, body {
-  width: 100%;
-}
-
-
-
 .HomePage {
   text-align: center;
-  display: flex;
-  flex-direction: column; 
-  align-items: stretch; 
-}
-
-
-
-.HeroTitle {
-  background: 
-      linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),       
-      url("images/vicente.jpg");
-  background-size: cover;
-  background-position: center;
-  min-height: 952px; 
-  display: flex; 
-  flex-direction: column; 
-  justify-content: center;
-  align-items: center; 
-  text-align: center; 
-}
-
-
-
-.WhoWeAre, .FeaturedProject, .UpcomingEvents {
-  min-height: 400px;
+  font-family: Arial, sans-serif;
   padding: 20px;
 }
 
-.HeroTitle h1 {
-  margin-right: 160px;
-  margin-left: 160px;
-  font-size: 72px;
-  font-weight: 700;
-  color: #000000;
-  text-align: center;
-}
-
-.HeroTitle h3 {
-  text-align: center;
-  font-size: 16px;
-  font-weight: 700;
-  color: #000000;
-  text-align: center;
-}
-
-.HeroTitle h2 {
-  margin-right: 160px;
-  margin-left: 160px;
-  font-size: 32px;
-  line-height: 50px;
-  color: #000000;
-}
-
-
-.HeroTitle button {
-  margin: 20px;
-  background: linear-gradient(90deg, #ffffff, #ffffff); 
-  color: rgb(0, 0, 0);
-  font-size: 14px; 
-  padding: 12px 24px; 
-  border: none; 
-  border-radius: 40px; 
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  justify-content: center;
-  text-align: center;
-}
-
-.HeroTitle button:hover {
-  background: linear-gradient(90deg, #a7a7a7, #acacac);
-  transform: scale(1.05); 
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); 
-}
-
-.WhoWeAre{
-  margin-right: 160px;
-  margin-left: 160px;
-  padding: 80px;
-}
-
-
-.WhoWeAre h4 {
-  margin-right: 160px;
-  margin-left: 160px;
-  font-size: 24px;
-  font-weight: 700;
-  color: #444;
-  text-align: center;
-}
-
-.WhoWeAre p {
-  margin-right: 160px;
-  margin-left: 160px;
-  font-size: 16px;
-  line-height: 28px;
-  color: #666;
-  margin: 0 auto;
-  max-width: 1200px;
-}
-
-.FeaturedProject {
-  height: 662px;
-  background-color: rgb(241, 241, 241);
-  display: flex;
-  flex-direction: row; 
-  justify-content: space-between; 
-  align-items: center; 
-  gap: 20px;   
-}
-
-.FP-Text {
-  margin-left: 160px;
-  flex: 1; 
-  padding: 10px;
-  max-height: 600px; 
-}
-
-.FP-Image {
-  margin-right: 160px;
-  flex: 1; 
-  text-align: right; 
-}
-
-.FP-Text h4 {
-  font-size: 24px;
-  font-weight: 700;
-  color: #444;
-  text-align: left;
-  margin-bottom: 5px;
-}
-
-.FP-Text h5 {
-  font-size: 20px;
-  font-weight: 700;
-  color: #868686;
-  text-align: left;
+.HeroTitle {
+  background: #f4f4f4;
+  padding: 40px;
+  border-radius: 10px;
   margin-bottom: 20px;
 }
 
-.FP-Text p {
-  word-wrap: break-word;
-  font-size: 16px;
-  line-height: 28px;
+.HeroTitle h1 {
+  font-size: 2.5em;
+  color: #333;
+}
+
+.HeroTitle h2 {
+  font-size: 1.5em;
   color: #666;
-  margin: 0 auto;
+  margin-top: 10px;
+}
+
+.HeroTitle button {
+  background: black;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.SignupSection {
+  background: #f8f8f8;
+  padding: 30px;
+  margin: 20px auto;
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.SignupLogo {
+  width: 100px;
+  margin-bottom: 15px;
+}
+
+.SignupSection p {
+  font-size: 1.2em;
+  color: #333;
+}
+
+.SignupInput {
+  width: 80%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+.SignupButton {
+  background: black;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.SignupButton:hover {
+  background: #444;
+}
+
+.WhoWeAre {
+  margin-top: 40px;
+}
+
+.FeaturedProject {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.FP-Text {
+  max-width: 600px;
   text-align: left;
-  max-height: inherit;
+  padding: 20px;
 }
 
 .FP-Image img {
-  max-width: 100%; 
-  height: 600px; 
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-}
-
-.UpcomingEvents {
-  margin-right: 160px;
-  margin-left: 160px;
-  display: flex;
-  justify-content: space-between;
-  gap: 20px; 
-}
-
-
-
-.UpcomingEventsTitle h4{
-  margin-top: 60px;
-  font-size: 24px;
-  font-weight: 700;
-  color: #444;
-  text-align: center;
-}
-
-
-
-.UpcomingEvents button {
-  margin: 10px;
-  margin-top: 30px;
-  background: linear-gradient(90deg, #ffffff, #ffffff); 
-  color: rgb(0, 0, 0);
-  font-size: 14px; 
-  padding: 12px 24px; 
-  border: none; 
-  border-radius: 8px; 
-  cursor: pointer; 
-  transition: all 0.3s ease; 
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.UpcomingEvents button:hover {
-  background: linear-gradient(90deg, #a7a7a7, #acacac); 
-  transform: scale(1.05); 
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); 
-}
-
- 
-.Event1, .Event2, .Event3 {
-  flex: 1 1 calc(33.33% - 20px);
-}
-
-.ShowMoreButton {
-  margin: 20px auto; /* Center horizontally */
-  background: linear-gradient(90deg, #fffefe, #fffefe); /* White background */
-  color: #000; /* Black text */
-  font-size: 16px; /* Slightly larger font size */
-  padding: 14px 28px; /* Larger padding */
-  border: none; /* Remove border */
-  border-radius: 40px; /* Rounded corners */
-  cursor: pointer; /* Pointer on hover */
-  transition: all 0.3s ease; /* Smooth hover effect */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  text-align: center; /* Align text */
-}
-
-.ShowMoreButton:hover {
-  background: linear-gradient(90deg, #a7a7a7, #acacac); /* Gray gradient on hover */
-  transform: scale(1.05); /* Slightly enlarge */
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
-}
-
-.ShowMoreButton:active {
-  transform: scale(0.95); /* Shrink slightly on click */
+  width: 300px;
+  border-radius: 10px;
 }
