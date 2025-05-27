@@ -1,10 +1,13 @@
+* {
+  box-sizing: border-box;
+}
+
 .dashboard-container {
     display: flex;
     flex-direction: column;
-    height: 100vh;
     font-family: sans-serif;
     background-color: #f9fafb;
-    flex-wrap: wrap;
+
   }
 
   .login-container {
@@ -218,8 +221,6 @@
   
   .leaderboard-table {
     width: 100%;
-    max-width: 800px;
-    margin: 1rem auto;
     border-collapse: collapse;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     background-color: #fff;
@@ -271,6 +272,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 16px;
+  
 }
 
 .team-card {

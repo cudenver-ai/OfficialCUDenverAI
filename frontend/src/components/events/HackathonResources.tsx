@@ -49,7 +49,18 @@ function HackathonResources() {
         
         </ul>
     </div>
-      
+        
+        {/* Hackathon Guide*/}
+                <Element name="Guide" className="section Guide">
+        <h2>🔍 Hackathon Guide</h2>
+        <ul>
+            <li><a href="https://funky-cathedral-ca3.notion.site/Hackathon-Guide-1d60549cb63e80dea36dfa79dd541727?pvs=74" target="_blank">Hackathon Guide </a> - Document to help you through the hackathon </li>
+            <li><a href="https://olucdenver.sharepoint.com/:w:/s/aisaofficers/Edh51f4g9X1OsxzMjWx-nOsBm0jWLq3ZFkmzQofE20VquA?e=GsplgG&download=1" target="_blank">Hackathon Starter Pack Worksheet</a> - A Worksheet to help you to set up your hackathon project</li>
+            <li><a href="https://olucdenver.sharepoint.com/:p:/s/aisaofficers/EdTEMY_HRXZGsPXHnBBpWiAB5L6Fsm0ZHVM22bTYsygszg?e=hqQ0c1&download=1" target="_blank">Hackathon Presentation Template</a> - A powerpoint template to help build final presentation (not require to use)</li>
+        </ul>
+
+
+        </Element>
         {/* Datasets Section */}
         <Element name="datasets" className="section Datasets">
             <h2>🔍 Datasets Search</h2>

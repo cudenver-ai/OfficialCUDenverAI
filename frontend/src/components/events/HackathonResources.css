@@ -56,6 +56,10 @@
 }
 
 /* Assign different background colors to each section */
+.section.Guide {
+    background: #f7cdd4;
+}
+
 .section.Datasets {
     background: #c9e5ff;
 }
