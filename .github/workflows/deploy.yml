@@ -30,6 +30,16 @@ jobs:
           curl -H "Content-Type: application/json" \
             -X POST \
             -d '{
-              "content": "🚨 Deployment failed! Check the logs here: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+              "content": "🚨 Deployment failed! Check the logs: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
             }' \
+            ${{ secrets.DISCORD_WEBHOOK_URL }}
+
+      - name: ✅ Discord Alert on Success
+        if: success()
+        run: |
+          curl -H "Content-Type: application/json" \
+            -X POST \
+            -d "{
+              \"content\": \"✅ Successfully deployed: \`${{ github.event.head_commit.message }}\`\n🔗 <https://github.com/${{ github.repository }}/commit/${{ github.sha }}>\" 
+            }" \
             ${{ secrets.DISCORD_WEBHOOK_URL }}
