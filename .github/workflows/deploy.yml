@@ -19,6 +19,7 @@ jobs:
           script: |
             cd ~/OfficialCUDenverAI  
             git pull origin main
+            docker system prune
             docker-compose build
             docker-compose create
             docker-compose start
