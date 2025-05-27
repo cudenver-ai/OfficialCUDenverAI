@@ -12,7 +12,7 @@ jobs:
       - name: Check Backend
         id: backend
         run: |
-          status=$(curl -s -o /dev/null -w "%{http_code}" https://your-backend-url.com)
+          status=$(curl -s -o /dev/null -w "%{http_code}" https://cudenver-ai.tech/api/)
           if [ "$status" -ne 200 ]; then
             echo "Backend is down"
             echo "backend_down=true" >> $GITHUB_OUTPUT
@@ -24,7 +24,7 @@ jobs:
       - name: Check Frontend
         id: frontend
         run: |
-          status=$(curl -s -o /dev/null -w "%{http_code}" https://your-frontend-url.com)
+          status=$(curl -s -o /dev/null -w "%{http_code}" https://cudenver-ai.tech/)
           if [ "$status" -ne 200 ]; then
             echo "Frontend is down"
             echo "frontend_down=true" >> $GITHUB_OUTPUT
