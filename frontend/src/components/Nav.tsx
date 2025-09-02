@@ -5,7 +5,7 @@ import Cookies from 'js-cookie';
 import axios from 'axios';
 
 /*Image imports*/
-import icon from './images/club-rxCX8m8Y.png';
+import icon from './images/Header_Logo.png';
 import defaultProfilePic from './images/Default_pfp.jpg'; 
 
 // UI Imports
@@ -18,8 +18,7 @@ const Nav = () => {
     //States
     ///////////////////////////
 
-    const [profilePicture, setProfilePicture] = useState(defaultProfilePic);
-    const [isAuthenticated, setIsAuthenticated] = useState(false);
+
     const [bar, setBarClass] = useState("bar unclicked")
     const [menu_class, setMenuClass] = useState("menu hidden")
     const [isMenuClicked, setIsMenuClicked] = useState(false)
@@ -31,7 +30,6 @@ const Nav = () => {
 
     const menuDisplay = (
         <div>
-          <button onClick={() => { updateMenu(); navigate('/home'); }}>Home</button>
           <button onClick={() => { updateMenu(); navigate('/projects'); }}>Projects</button>
           <button onClick={() => { updateMenu(); navigate('/events'); }}>Events</button>
           <button onClick={() => { updateMenu(); navigate('/blog'); }}>Resources</button>
@@ -48,9 +46,6 @@ const Nav = () => {
                 </MenuItem>
                 <MenuItem>
                   <button onClick={() => { updateMenu(); navigate('/events'); }}>MyEvents</button>
-                </MenuItem>
-                <MenuItem>
-                  <button onClick={() => { updateMenu(); SignOut(); }}>SignOut</button>
                 </MenuItem>
               </MenuItems>
             </Menu>
@@ -102,9 +97,12 @@ const Nav = () => {
             <nav>
                 {/*AI Club navigation bar logo*/}
 
-                <img
+                <button className='Logo_Button' onClick={() => { navigate('/home'); }}>
+                  <img className='Logo_img'
                     src={icon} 
-                    alt="AI Club Icon"                />
+                    alt="AI Club Icon" 
+                  />
+                </button>
 
                 {/*AI Club navigation bar buttons*/}
 
@@ -129,9 +127,7 @@ const Nav = () => {
 
             {/*The separation line*/}
 
-            <div className="hring">
-                <hr />
-            </div>
+
         </div>
     );
 };

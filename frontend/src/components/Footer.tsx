@@ -41,9 +41,6 @@ function Footer() {
             <a className="social-link" href="mailto:aisa@ucdenver.edu?subject=Your%20Subject%20Here&body=Your%20message%20here.">
               <i className="fas fa-envelope"></i>
             </a>
-            <a href="" className="social-link">
-              <i className="fas fa-phone" ></i> 
-            </a>
 
           </ul>
           
@@ -81,8 +78,13 @@ function Footer() {
       </div>
 
       <div className="RightsReserved">
-        Proudly affiliated with the University of Colorado Denver.
-  © 2024 AI Student Association at CU Denver. All rights reserved.
+        
+        
+      Proudly affiliated with the University of Colorado Denver.
+      <br></br>
+      © 2025 AI Student Association at CU Denver. 
+      <br></br>
+      All rights reserved.
       </div>
   
   </footer>

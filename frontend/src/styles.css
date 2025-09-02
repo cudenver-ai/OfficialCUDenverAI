@@ -3,7 +3,13 @@
   box-sizing: border-box;
 }
 
-html,body {
+@keyframes gradient-shift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+html, body {
   overflow-x: hidden;
   margin: 0;
   font-family: 'Arial', sans-serif;
@@ -11,9 +17,12 @@ html,body {
   line-height: 1.6;
   color: var(--primary-color);
   width: 100%;
-  background: 
-    linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),       
-    url("./components/images/pawel-czerwinski-M40QnK-PXkI-unsplash.jpg");
+
+  /* Replace static background with your animated gradient */
+  background: linear-gradient(-70deg, #f0e6c7, #cec3a0, #aca48b, #fcdd78);
+  background-size: 400% 400%;
+  background-size: 400% 400%;
+  animation: gradient-shift 100s ease infinite;
 }
 
 section {
