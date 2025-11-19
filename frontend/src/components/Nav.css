@@ -13,12 +13,17 @@ nav {
 
 .Logo_img {
   --logo-size: clamp(20px, 5vw, 80px);
-  margin-top: calc(var(--logo-size) * 0.1);;
+  margin-top: calc(var(--logo-size) * 0.1);
   width: auto;
-  height: clamp(20px, 5vw, 40px); /* min: 20px, scales with window, max: 80px */
-  margin-left: calc(var(--logo-size) * -1.75);
-  display: flex;
+  height: var(--logo-size);
+  margin-right: calc(150px + var(--logo-size) * 1.75);
+
+  position: relative;
+  left: -5vw;  
+
 }
+
+
 
 .Logo_Button {
   background: transparent;  
