@@ -15,11 +15,15 @@ import Hackathon from './components/events/Hackathon.tsx'
 import HackathonResources from './components/events/HackathonResources.tsx'
 import FAQ from './components/events/Faq.tsx'
 import GithubEvent from './components/events/Github.tsx'
-import HackathonDashboard from './components/events/HackathonDashboard.tsx'
+//import HackathonDashboard from './components/events/HackathonDashboard.tsx'
 import HackathonPrizes from './components/events/Prizes.tsx'
 import HackathonRules from './components/events/Rules.tsx'
 import Leaderboard from './components/events/Leaderboard.tsx'
 import AdminDashboard from './components/events/AdminDashboard.tsx'
+
+const HackathonDashboard = React.lazy(() =>
+  import('./components/events/HackathonDashboard.tsx')
+);
 
 
 
@@ -53,7 +57,18 @@ function App() {
           <Route path="/events/hackathon2025/prizes" element={<HackathonPrizes />} />
           <Route path="/events/hackathon2025/rules" element={<HackathonRules />} />
           <Route path="/hackathon-dashboard/admin" element={<AdminDashboard />} />
-          <Route path="/hackathon-dashboard" element={<HackathonDashboard />} />
+          <Route
+          path="/hackathon-dashboard"
+          element={
+            process.env.REACT_APP_AUTH_API_KEY ? (
+            <React.Suspense fallback={<p>Loading dashboard…</p>}>
+              <HackathonDashboard />
+              </React.Suspense>
+              ) : (
+              <p>Hackathon sign-in is currently unavailable.</p>
+            )
+            }
+            />
         </Routes>
         <Footer />
       </div>
